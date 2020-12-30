@@ -1,17 +1,19 @@
 package com.cos.reflect.controller;
 
 import com.cos.reflect.anno.RequestMapping;
+import com.cos.reflect.controller.dto.JoinDto;
+import com.cos.reflect.controller.dto.LoginDto;
 
 public class UserController {
 	
-	@RequestMapping(value = "/join")
-	public String join() {
+	@RequestMapping(value = "/user/join")
+	public String join(JoinDto dto) {
 		System.out.println("join()함수 호출 됨");
 		return "/";
 	}
 	
-	@RequestMapping(value = "/login")
-	public String login() {
+	@RequestMapping(value = "/user/login")
+	public String login(LoginDto dto) {
 		System.out.println("login()함수 호출 됨");
 		return "/";
 	}
